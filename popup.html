@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 340px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 12px;
+            margin: 0;
+            background-color: #120b1c;
+            color: #e2d7ec;
+        }
+
+        h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #3d2462;
+            padding-bottom: 8px;
+            color: #ff77ff;
+            font-weight: 600;
+            text-shadow: 0 0 5px rgba(255, 119, 255, 0.3);
+        }
+
+        #email-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .email-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2a1b38;
+            padding: 10px 0;
+            font-size: 13px;
+            transition: opacity 0.3s ease;
+        }
+
+            .email-item:last-child {
+                border-bottom: none;
+            }
+
+        .email-content {
+            width: 85%;
+        }
+
+        .subject {
+            font-weight: 600;
+            color: #05d9e8;
+            display: block;
+            margin: 2px 0;
+        }
+
+        .snippet {
+            color: #9283a6;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+
+        /* Mark as Read Button */
+        .read-btn {
+            background: none;
+            border: none;
+            color: #9283a6;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 5px 8px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+            .read-btn:hover {
+                color: #ff77ff;
+                background-color: rgba(255, 119, 255, 0.1);
+            }
+
+        #auth-btn {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #7b2cbf;
+            color: #ffffff;
+            border: 1px solid #b100e8;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease-in-out;
+        }
+
+            #auth-btn:hover {
+                background-color: #9d4edd;
+                box-shadow: 0 0 8px rgba(177, 0, 232, 0.6);
+            }
+    </style>
+</head>
+<body>
+    <h3>Gmail Glance</h3>
+    <button id="auth-btn" style="display:none;">Connect to Gmail</button>
+    <ul id="email-list"></ul>
+    <script src="popup.js"></script>
+</body>
+</html>
