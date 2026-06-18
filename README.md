@@ -2,7 +2,9 @@
 
 A lightweight, visually striking Chrome extension built with Manifest V3 that allows you to quickly check your Gmail inbox, view unread counts, and manage emails directly from your browser toolbar.
 
-![Extension Preview](images/icon128.png) ## ✨ Features
+![Extension Preview](images/icon128.png) 
+
+## ✨ Features
 * **Live Background Syncing:** Automatically fetches your unread email count every 5 minutes and updates the extension badge.
 * **Vaporwave Dark Mode UI:** A custom-designed, high-contrast dark theme with neon accents to reduce eye strain.
 * **Instant Inbox Management:** View the sender, subject, and snippet of your latest emails, and use the inline `✓` button to mark them as read instantly.
