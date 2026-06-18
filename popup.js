@@ -44,7 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const contentDiv = document.createElement("div");
                     contentDiv.className = "email-content";
+                    contentDiv.title = "Click to open in Gmail";
                     contentDiv.innerHTML = `<strong>${from}</strong><br><span class="subject">${subject}</span><br><span class="snippet">${msgDetails.snippet}</span>`;
+
+                    // UPDATED: Open the tab AND instantly mark as read to clear the UI
+                    contentDiv.addEventListener("click", () => {
+                        chrome.tabs.create({ url: `https://mail.google.com/mail/u/0/#inbox/${msg.id}` });
+                        markAsRead(msg.id, token);
+                    });
 
                     const checkBtn = document.createElement("button");
                     checkBtn.className = "read-btn";

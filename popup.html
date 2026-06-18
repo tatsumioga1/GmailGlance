@@ -41,9 +41,19 @@
                 border-bottom: none;
             }
 
+        /* Updated email content section to make it feel clickable */
         .email-content {
             width: 85%;
+            cursor: pointer;
+            padding: 4px;
+            margin-left: -4px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
         }
+
+            .email-content:hover {
+                background-color: rgba(123, 44, 191, 0.15); /* Subtle purple highlight */
+            }
 
         .subject {
             font-weight: 600;
